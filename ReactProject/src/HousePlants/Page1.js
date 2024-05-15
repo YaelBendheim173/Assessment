@@ -62,7 +62,7 @@ function Page1(props){
 };
 // Function to filter plants by latin name
 const FilterByLatinName = (lval) => {
-  const filtered = searchResults.filter(d => d.LatinName.includes(lval));
+  const filtered = searchResults.filter(d => d["Latin name"].includes(lval));
   setSearchResults(filtered);
 };
   
@@ -87,9 +87,9 @@ const FilterByLatinName = (lval) => {
           <table className='table table-dark'>
             <tbody>
               <tr key={index}>
-                <td><h3>Latin name:</h3> <h4>{d.json}</h4></td>
-                <td><h3>Family:</h3> <h4>{d.Family}</h4></td>
-                <td><h3>Category:</h3> <h4>{d.Categories}</h4></td>
+                <td><h3>Latin name:</h3> <h4>{d["Latin name"]}</h4></td>
+                <td><h3>Family:</h3> <h4>{d["Family"]}</h4></td>
+                <td><h3>Category:</h3> <h4>{d["Categories"]}</h4></td>
                 {/* Button to navigate to a detailed page for the plant */}
                 <button onClick={()=>navigate(`/Page2/${d.id}`)}>show more information</button>
               </tr>

@@ -54,7 +54,7 @@ return(
 <img src={data.Img}></img>
     </div>
 {/* Button to navigate back to the previous page */}
-<button onClick={()=>navigate(-1)}>go back</button>
+<button onClick={()=>navigate(-1)} type="button" className="btn btn-outline-secondary">go back</button>
 
 </>)
 }
